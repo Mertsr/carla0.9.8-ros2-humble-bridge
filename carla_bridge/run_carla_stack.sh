@@ -47,7 +47,7 @@ conda activate carla35
 export PYTHONPATH="$EGG"
 
 echo "[4/5] carla_telemetry_sender"
-#wpython3 "$HOME/carla_bridge/carla_telemetry_sender.py" > "$LOGDIR/telemetry.log" 2>&1 &
+wpython3 "$HOME/carla_bridge/carla_telemetry_sender.py" > "$LOGDIR/telemetry.log" 2>&1 &
 
 echo "[5/5] DONE"
 echo "CARLA + ROS2 stack ayakta 🚀"
