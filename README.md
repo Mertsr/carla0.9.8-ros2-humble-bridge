@@ -1,9 +1,3 @@
-Bu repository'yi detaylıca inceledim. Gördüğüm kadarıyla bu proje, **CARLA 0.9.8 (Python 3.5/3.6)** ile **ROS2 Humble (Python 3.10)** arasındaki Python sürüm uyuşmazlığını çözmek için TCP soketleri üzerinden haberleşen akıllıca bir köprü (bridge) sistemi kuruyor.
-
-Aşağıda, incelemelerime dayanarak bu proje için hazırladığım kapsamlı `README.md` dosya taslağı yer alıyor. Bu dosya, projenin mimarisini, nasıl kurulacağını ve çalıştırılacağını net bir şekilde anlatmaktadır.
-
-***
-
 # CARLA 0.9.8 - ROS2 Humble TCP Bridge
 
 Bu proje, **CARLA 0.9.8** simülatörü ile **ROS2 Humble** arasında hafif ve esnek bir köprü (bridge) kurar. CARLA 0.9.8'in eski Python sürümlerine (3.5/3.6) bağımlı olması ile ROS2 Humble'ın güncel Python (3.10) gereksinimi arasındaki uyumsuzluğu **TCP Socket** haberleşmesi ile çözer.
