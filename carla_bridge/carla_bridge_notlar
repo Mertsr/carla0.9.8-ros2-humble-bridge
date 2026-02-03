@@ -1,0 +1,44 @@
+(carla35) mertsrc@mertsrc-PC:~/carla_bridge$ PYTHONPATH=/home/mertsrc/carla098/PythonAPI/carla/dist/carla-0.9.8-py3.5-linux-x86_64.egg python3 ~/carla_bridge/carla_control_server.py
+
+PYTHONPATH=/home/mertsrc/carla098/PythonAPI/carla/dist/carla-0.9.8-py3.5-linux-x86_64.egg \
+python3 -c "import carla; print('CARLA IMPORT OK')"
+
+
+
+Başlangıç:
+
+1. terminal: (carla35) mertsrc@mertsrc-PC:~/carla_bridge$ PYTHONPATH=/home/mertsrc/carla098/PythonAPI/carla/dist/carla-0.9.8-py3.5-linux-x86_64.egg python3 ~/carla_bridge/carla_control_server.py
+
+2. terminal: (carla35) mertsrc@mertsrc-PC:~/carla098$ ./CarlaUE4.sh -quality-level=Low -opengl
+
+3. terminal: (carla35) mertsrc@mertsrc-PC:~/carla098/PythonAPI/examples$ PYTHONPATH=../carla/dist/carla-0.9.8-py3.5-linux-x86_64.egg python3 manual_control.py --res 1920x1080
+
+4. terminal: mertsrc@mertsrc-PC:~$ ros2 run carla_tcp_bridge bridge_node
+
+
+CARLA → ROS2	TÜM sensörler / telemetry	9000
+ROS2 → CARLA	TÜM kontrol komutları	9001
+
+
+
+
+İlk spawn ve kontrol:
+
+1. terminal: (carla37) mertsrc@mertsrc-PC:~/carla098$ ./CarlaUE4.sh -quality-level=Low -opengl
+
+2. terminal: (carla35) mertsrc@mertsrc-PC:~/carla_bridge$ PYTHONPATH=/home/mertsrc/carla098/PythonAPI/carla/dist/carla-0.9.8-py3.5-linux-x86_64.egg python3 ~/carla_bridge/carla_control_server.py
+
+3. terminal: mertsrc@mertsrc-PC:~$ ros2 run carla_tcp_bridge bridge_node
+
+4. terminal: (carla35) mertsrc@mertsrc-PC:~/carla_bridge$ PYTHONPATH=/home/mertsrc/carla098/PythonAPI/carla/dist/carla-0.9.8-py3.5-linux-x86_64.egg python3 ~/carla_bridge/carla_pose_sender.py
+
+5. terminal: (carla35) mertsrc@mertsrc-PC:~/ros2_ws/src/carla_tcp_bridge$ PYTHONPATH=/home/mertsrc/carla098/PythonAPI/carla/dist/carla-0.9.8-py3.5-linux-x86_64.egg python3 ~/carla_bridge/spawn_hero_keepalive.py
+
+6. terminal: mertsrc@mertsrc-PC:~$ ros2 topic pub -r 10 /carla/hero/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.4}, angular: {z: 0.0}}" 
+
+
+(carla35) mertsrc@mertsrc-PC:~/carla_bridge$ PYTHONPATH=/home/mertsrc/carla098/PythonAPI/carla/dist/carla-0.9.8-py3.5-linux-x86_64.egg python3 ~/carla_bridge/carla_telemetry_sender.py
+
+
+
+

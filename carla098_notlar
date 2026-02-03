@@ -1,0 +1,27 @@
+CARLA KURULUM:
+
+"https://github.com/carla-simulator/carla/releases" bu adresten CARLA_0.9.8.tar.gz dosyasını indir.
+
+İndirdiğin dosyayı home dizininde Carla098 isimli bir klasörün içine koy.
+
+Dosyanın bulunduğu dizinde "tar -xvzf CARLA_0.9.8.tar.gz" diyerek dosyayı ayıkla.
+
+"./CarlaUE4.sh -opengl" diyerek Carla Simülatörünü başlat.
+
+"cd Carla098/PythonAPI/examples" komutunu girerek bu dizine gel.
+
+"PYTHONPATH=../carla/dist/carla-0.9.8-py3.5-linux-x86_64.egg python3 manual_control.py" Şimdi bu komutu girerek aracını çalıştır.
+
+Çalıştıysa tebrikler, artık 2. aşamaya geçebilirsin.
+
+
+Carla098:
+
+> ./config.py --no-rendering      # Disable rendering
+> ./config.py --map Town05        # Change map
+> ./config.py --weather ClearNoon # Change weather
+
+mertsrc@mertsrc-PC:~/carla098$ ./CarlaUE4.sh -quality-level=Low -opengl 
+
+~/carla098/PythonAPI/examples$ PYTHONPATH=../carla/dist/carla-0.9.8-py3.5-linux-x86_64.egg python3 manual_control.py --res 1920x1080
+
